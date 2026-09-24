@@ -65,12 +65,11 @@ platform :ios do
       api_key: api_key,
     )
 
-    current_build_number = 54
-
-    increment_build_number(
-      xcodeproj: "#{GITHUB_WORKSPACE}/LoopFollow.xcodeproj",
-      build_number: current_build_number
-    )      
+  # App Store Connect'teki en son build numarasını çeker ve 1 artırır
+  increment_build_number(
+    build_number: latest_testflight_build_number + 1,
+    xcodeproj: "ProjenizinAdi.xcodeproj"
+  )   
     
     match(
       type: "appstore",
