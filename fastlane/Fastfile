@@ -67,7 +67,7 @@ platform :ios do
 
   # App Store Connect'teki en son build numarasını çeker ve 1 artırır
   increment_build_number(
-    build_number: latest_testflight_build_number + 1,
+    build_number: 57,
     xcodeproj: "ProjenizinAdi.xcodeproj"
   )   
     
